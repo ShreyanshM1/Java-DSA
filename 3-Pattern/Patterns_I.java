@@ -1,4 +1,3 @@
-package C_Pattern;
 
 // Pyramid Pattern 
 
