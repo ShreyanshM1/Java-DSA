@@ -48,13 +48,26 @@ public class Assignment {
     return res;
   }
 
+  public static void towerOfHenoi(int n,String src, String helper, String dest){
+    // T.C = O(2^n)
+    if(n == 1){
+      System.out.println("transfer disk "+ n + " from "+src+" to "+dest);
+      return;
+    }
+    towerOfHenoi(n-1, src, dest, helper);
+    System.out.println("transfer disk "+ n + " from "+src+" to "+dest);
+    towerOfHenoi(n-1, helper, src, dest);
+  }
+
   
   public static void main(String[] args) {
     // int arr[] = {1,2,3,4,5,2,2,7};
     // allOccurences(arr, 0, 2);
     // printDigits(2019);
-    String str = "aba";
-    int n = str.length();
-    System.out.print(countSubstrings(str, 0, n-1, n));
+    // String str = "aba";
+    // int n = str.length();
+    // System.out.print(countSubstrings(str, 0, n-1, n));
+    int n = 3;
+    towerOfHenoi(n,"S","H","D");
   }
 }
