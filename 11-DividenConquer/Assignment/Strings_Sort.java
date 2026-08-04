@@ -27,15 +27,14 @@ public class Strings_Sort {
 
     while(i < m && j < n){
       if(isAlphabeticallySmaller(arr1[i], arr2[j])){
-        arr3[idx] = arr1[j];
+        arr3[idx] = arr1[i];
         i++;
-        idx++;
-      } 
-      else{
+    }
+    else{
         arr3[idx] = arr2[j];
         j++;
-        idx++;
-      }
+    }
+    idx++;
     }
     while(i < m){
       arr3[idx] = arr1[i];
