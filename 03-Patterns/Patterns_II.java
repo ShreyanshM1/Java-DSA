@@ -1,5 +1,3 @@
-package C_Pattern;
-
 public class Patterns_II {
 
   public static void hollow_rectangle(int totRows, int totCols){
